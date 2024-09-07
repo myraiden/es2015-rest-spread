@@ -74,7 +74,7 @@ randomIndex([9,8,7,6,5,4],[,1,2,3,4,5,'carrots'])
 addKeyVal({a:1, b:2, c:4},'d',8)
 removeKey({k1:2, k2:2, k3:6, k4:18, k5:54, k6:162},'k4')
 combine({a1:'fuji', a2:'redDelicious'},{a3:'grannySmith', a4:'empire'})
-update({a:9, b:2, c:3, d:8, e:5, f:6, g:7},a,10)
+update({a:9, b:2, c:3, d:8, e:5, f:6, g:7},'a',10)
 */
 /************************************************/
 /*
@@ -102,9 +102,9 @@ function addKeyVal(obj, key, val) {
 /** Return a new object with a key removed. */
 
 function removeKey(obj, key) {
-    return {...obj}
-    //return newObj.filter((itemVal,itemIndex,obj)=>{if(itemIndex!=key) return itemVal})
-    //return obj.reduce((goodObject,currentObject)=>{if(object[key]!=key); return currentObject})
+    {[key]: undefined,...obj}=shallow;
+    return obj;
+
 }//BROKE
 
 
@@ -118,6 +118,6 @@ function combine(obj1, obj2) {
 /** Return a new object with a modified key and value. */
 
 function update(obj, key, val) {
-
-}
+    return {...obj, [key]: val}
+}//good
 
