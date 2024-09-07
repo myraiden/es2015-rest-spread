@@ -11,7 +11,8 @@ function filterOutOdds() {
 ```
 ​
 ## Refactor it to use the rest operator & an arrow function:
-' /* Write an ES2015 Version */ '
+
+` /* Write an ES2015 Version */ `
 ​
 ## findMin
 Write a function called findMin that accepts a variable number of arguments and returns the smallest argument.
@@ -24,6 +25,7 @@ findMin(3,1) // 1
 ​
 ## mergeObjects
 Write a function called mergeObjects that accepts two objects and returns a new object which contains all the keys and values of the first object and second object.
+
 ` mergeObjects({a:1, b:2}, {c:3, d:4}) // {a:1, b:2, c:3, d:4} `
 ​
 ## doubleAndReturnArgs
