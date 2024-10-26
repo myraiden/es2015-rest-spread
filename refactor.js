@@ -102,10 +102,11 @@ function addKeyVal(obj, key, val) {
 /** Return a new object with a key removed. */
 
 function removeKey(obj, key) {
-    {[key]: undefined,...obj}=shallow;
-    return obj;
+    let shallow={...obj};
+    delete shallow[key]
+    return shallow;
 
-}//BROKE
+}//good
 
 
 /** Combine two objects and return a new object. */
